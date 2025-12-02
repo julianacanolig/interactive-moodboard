@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+}
+
+#moodboard-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.draggable {
+    position: absolute;
+    width: 150px;
+    user-select: none;
+}
+
+#moodboard-cursor {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: black;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.25s ease, height 0.25s ease;
+    z-index: 9999;
+}
+
+#moodboard-cursor.hover {
+    width: 32px;
+    height: 32px;
+}
+
+#drag-tip {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    background: rgba(255,255,255,0.8);
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 9998;
+}
+
+#credit {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #333;
+    z-index: 9998;
+}
